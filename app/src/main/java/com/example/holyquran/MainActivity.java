@@ -88,6 +88,40 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnOneAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(verseNumber != -1 || surahNumber != -1) {
+
+                    verseNumber = verseNumber + 1;
+                    if(verseIndex.surahAyatCount[surahNumber - 1] < verseNumber)
+                    {
+                        surahNumber = surahNumber + 1;
+                        verseNumber = 1;
+                    }
+                    if (surahNumber > 114 ) {
+                        errorSetter.setText("Complete!");
+
+                        verseText.setText("");
+                        surahNameUrdu.setText("_____");
+                        surahNameEng.setText("______");
+                        verseNo.setText("");
+                        surahNo.setText("");
+                        verseNumber = surahNumber = -1;
+                    } else {
+                        errorSetter.setText("");
+
+                        verseNo.setText(String.valueOf(verseNumber));
+                        surahNo.setText(String.valueOf(surahNumber));
+                        actualVerseNumber = verseIndex.SSP[surahNumber - 1] + verseNumber - 1;
+                        verseText.setText(arabicVerse.QuranArabicText[actualVerseNumber]);
+                        surahNameUrdu.setText(verseIndex.urduSurahNames[surahNumber - 1]);
+                        surahNameEng.setText(verseIndex.englishSurahNames[surahNumber - 1]);
+                    }
+                }
+            }
+        });
     }
 
 }
