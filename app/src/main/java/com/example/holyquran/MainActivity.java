@@ -122,6 +122,33 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnOneSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(verseNumber != -1 || surahNumber != -1) {
+
+                    verseNumber = verseNumber - 1;
+                    if(0 >= verseNumber)
+                    {
+                        surahNumber = surahNumber - 1;
+                        verseNumber = 1;
+                    }
+                    if (surahNumber <= 0 ) {
+                        errorSetter.setText("Start!");
+
+                        verseNumber = surahNumber = 1;
+                    }
+
+                    verseNo.setText(String.valueOf(verseNumber));
+                    surahNo.setText(String.valueOf(surahNumber));
+                    actualVerseNumber = verseIndex.SSP[surahNumber - 1] + verseNumber - 1;
+                    verseText.setText(arabicVerse.QuranArabicText[actualVerseNumber]);
+                    surahNameUrdu.setText(verseIndex.urduSurahNames[surahNumber - 1]);
+                    surahNameEng.setText(verseIndex.englishSurahNames[surahNumber - 1]);
+                }
+            }
+        });
     }
 
 }
