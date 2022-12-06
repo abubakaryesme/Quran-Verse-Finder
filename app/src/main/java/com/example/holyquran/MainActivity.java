@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     verseText.setText("");
                     surahNameUrdu.setText("_____");
                     surahNameEng.setText("______");
+                    verseNumber=surahNumber=-1;
                 }
                 else
                 {
