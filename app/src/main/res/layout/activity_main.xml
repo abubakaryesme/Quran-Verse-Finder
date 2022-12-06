@@ -4,27 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/teal_700"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/textVerse"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="72dp"
+        android:layout_height="45dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="2dp"
+        android:gravity="center|center"
         android:text="Verse #"
-        android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton5"
         app:layout_constraintEnd_toStartOf="@+id/editTextVerse"
         app:layout_constraintStart_toEndOf="@+id/editTextSuraf"
-        app:layout_constraintTop_toTopOf="@+id/editTextVerse" />
+        app:layout_constraintTop_toTopOf="@+id/editTextVerse"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextVerse"
         android:layout_width="0dp"
-        android:layout_height="27dp"
+        android:layout_height="50dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="17dp"
@@ -37,22 +39,23 @@
 
     <TextView
         android:id="@+id/textSurah"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="17dp"
+        android:layout_width="97dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="15dp"
         android:layout_marginEnd="6dp"
+        android:gravity="center|center"
         android:text="Surah #"
-        android:textAlignment="center"
-        android:textSize="20dp"
+        android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="@+id/textVerse"
         app:layout_constraintEnd_toStartOf="@+id/editTextSuraf"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textVerse" />
+        app:layout_constraintTop_toTopOf="@+id/textVerse"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/editTextSuraf"
         android:layout_width="0dp"
-        android:layout_height="27dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="13dp"
@@ -71,7 +74,9 @@
         android:layout_marginTop="67dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="67dp"
-        android:text="TextView"
+        android:background="@color/cardview_shadow_start_color"
+        android:text=""
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +88,7 @@
         android:layout_height="30dp"
         android:layout_marginTop="21dp"
         android:layout_marginBottom="16dp"
-        android:text="TextView"
+        android:text="_____"
         android:textAlignment="center"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/displayVerseText"
@@ -96,12 +101,25 @@
         android:layout_width="107dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:text="TextView"
+        android:text="_____"
         android:textAlignment="center"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/textSurahNameUrdu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textSurahNameUrdu" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="130dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="136dp"
+        android:gravity="left|center"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textSurahNameUrdu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textSurahNameUrdu"
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton3"
@@ -120,8 +138,8 @@
         android:id="@+id/floatingActionButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="114dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="4dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,6 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/cardview_dark_background"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextVerse"
