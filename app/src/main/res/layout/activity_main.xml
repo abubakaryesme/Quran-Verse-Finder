@@ -74,11 +74,11 @@
         android:layout_marginTop="67dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="67dp"
-        android:textSize="25dp"
-        android:fontFamily="@font/noorehuda_regular"
         android:background="@color/cardview_shadow_start_color"
+        android:fontFamily="@font/noorehuda_regular"
         android:text=""
         android:textAlignment="center"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,10 +115,10 @@
         android:layout_width="130dp"
         android:layout_height="0dp"
         android:layout_marginStart="136dp"
+        android:fontFamily="@font/noorehuda_regular"
         android:gravity="left|center"
         android:text=""
         android:textSize="20dp"
-        android:fontFamily="@font/noorehuda_regular"
         app:layout_constraintBottom_toBottomOf="@+id/textSurahNameUrdu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textSurahNameUrdu"
@@ -128,12 +128,10 @@
         android:id="@+id/floatingActionButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="4dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/floatingActionButton4"
         app:layout_constraintStart_toStartOf="@+id/textSurah"
         app:srcCompat="@android:drawable/ic_input_add" />
 
@@ -141,7 +139,7 @@
         android:id="@+id/floatingActionButton4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="56dp"
         android:layout_marginBottom="4dp"
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -160,5 +158,16 @@
         app:layout_constraintStart_toEndOf="@+id/editTextVerse"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="?attr/actionModePasteDrawable" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

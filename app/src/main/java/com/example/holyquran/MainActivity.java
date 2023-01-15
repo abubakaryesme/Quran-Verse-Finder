@@ -1,5 +1,7 @@
 package com.example.holyquran;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton btnOneAdd;
     FloatingActionButton btnOneSub;
     FloatingActionButton btnSearch;
+    FloatingActionButton btnGitHubCode;
     EditText surahNo;
     EditText verseNo;
     TextView surahNameUrdu;
@@ -44,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnOneAdd = findViewById(R.id.floatingActionButton3);
         btnOneSub = findViewById(R.id.floatingActionButton4);
         btnSearch = findViewById(R.id.floatingActionButton5);
+        btnGitHubCode = findViewById(R.id.floatingActionButton6);
 
         surahNo= findViewById(R.id.editTextSuraf);
         verseNo = findViewById(R.id.editTextVerse);
@@ -55,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
 
         verseIndex = new QDH();
         arabicVerse = new QuranArabicText();
+
+        btnGitHubCode.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                try {
+                    Uri webpage = Uri.parse("https://github.com/abubakaryesme/Quran-Verse-Finder/commits/main");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                    startActivity(intent);
+                } catch (Exception ex) {
+
+                }
+            }
+        });
 
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
